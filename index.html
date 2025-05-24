@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Majestic Global Tours</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: url('https://via.placeholder.com/1600x600') center/cover no-repeat;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    header img {
+      max-width: 250px;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      margin-bottom: 1rem;
+    }
+    .tours, .testimonials {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .tour, .testimonial {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    .tour img, .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    form input, form textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #007BFF;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    footer a {
+      color: #ddd;
+      margin: 0 0.5rem;
+    }
+    .left-align {
+      text-align: left;
+    }
+    .social-links a {
+      font-size: 1.2rem;
+      margin-right: 1rem;
+      text-decoration: none;
+    }
+    .tour .more-info {
+      display: none;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .tour:hover .more-info {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-overlay">
+      <div class="header-content">
+        <img src="images/logo.jpg" alt="Majestic Global Tours Logo" class="logo" />
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="left-align">
+    <h2>About Us</h2>
+    <p>Majestic Global Tours is a premier travel and tours provider offering unforgettable experiences around the globe. With decades of service, we are committed to delivering high-quality and safe travel solutions for all your adventure needs.</p>
+  </section>
+
+  <section id="tours">
+    <h2>Our Tour Packages</h2>
+    <div class="tours">
+      <div class="tour">
+        <img src="images/citytour.jpg" alt="City Tour" />
+        <h3>City Highlights</h3>
+        <p>Experience the best landmarks and culture with our guided city tours.</p>
+      </div>
+      <div class="tour">
+        <img src="images/beaches.jpg" alt="Beach Tour" />
+        <h3>Beach Getaways</h3>
+        <p>Relax on pristine beaches with luxurious accommodations and activities.</p>
+      </div>
+      <div class="tour">
+        <img src="images/adventuretrip.jpg" alt="Adventure Tour" />
+        <h3>Adventure Trips</h3>
+        <p>Thrilling adventures including hiking, rafting, and jungle safaris.</p>
+      </div>
+      <div class="tour">
+        <img src="images/darjeeling.jpg" alt="Darjeeling Tour" />
+        <h3>Sikkim, Gangtok & Darjeeling</h3>
+        <p>Enjoy the breathtaking views of tea gardens and the Himalayas.</p>
+        <div class="more-info">
+          <p>
+            <strong>Sikkim, Gangtok &amp; Darjeeling Delight</strong><br><br>
+
+            <strong>Duration:</strong> 6 Days / 5 Nights<br>
+            <strong>Destinations Covered:</strong> Gangtok &ndash; Tsomgo Lake &ndash; Baba Mandir &ndash; Darjeeling<br><br>
+
+            <strong>Package Highlights:</strong><br>
+            &bull; Mesmerizing views of Mount Kanchenjunga<br>
+            &bull; Visit the scenic Tsomgo Lake and Baba Harbhajan Mandir<br>
+            &bull; Explore MG Road and local markets in Gangtok<br>
+            &bull; Sunrise view from Tiger Hill in Darjeeling<br>
+            &bull; Visit Batasia Loop, Peace Pagoda, and the Himalayan Mountaineering Institute<br>
+            &bull; Optional joy ride on the Darjeeling Himalayan Railway (Toy Train)<br><br>
+
+            <strong>Inclusions:</strong><br>
+            &bull; Accommodation in quality hotels<br>
+            &bull; Daily breakfast and dinner<br>
+            &bull; Sightseeing by private vehicle<br>
+            &bull; Permits for Tsomgo Lake visit<br>
+            &bull; All tolls, parking, and driver allowances
+          </p>
+        </div>
+      </div>
+      <div class="tour">
+        <img src="images/himachal.jpg" alt="Himachal Pradesh Tour" />
+        <h3>Himachal Pradesh</h3>
+        <p>Explore the snow-covered valleys, temples, and vibrant towns of Himachal.</p>
+        <div class="more-info">
+          <p>
+            <strong>Scenic Himachal Tour Package</strong><br><br>
+
+            <strong>Duration:</strong> 7 Days / 6 Nights<br>
+            <strong>Destinations Covered:</strong> Shimla &ndash; Manali &ndash; Kufri &ndash; Solang Valley &ndash; Kullu<br><br>
+
+            <strong>Package Highlights:</strong><br>
+            &bull; Visit to the famous Mall Road &amp; The Ridge in Shimla<br>
+            &bull; Enjoy snow activities in Kufri and Solang Valley<br>
+            &bull; Explore ancient temples like Hadimba Devi Temple and Vashisht Kund<br>
+            &bull; River rafting and adventure sports in Kullu<br>
+            &bull; Panoramic views of snow-capped Himalayan ranges<br>
+            &bull; Romantic walks amidst pine forests and apple orchards<br><br>
+
+            <strong>Inclusions:</strong><br>
+            &bull; Accommodation in premium hotels/resorts<br>
+            &bull; Daily breakfast and dinner<br>
+            &bull; Private vehicle for all transfers and sightseeing<br>
+            &bull; All applicable taxes and tolls<br>
+            &bull; Experienced driver and local assistance
+          </p>
+        </div>
+      </div>
+      <div class="tour">
+        <img src="images/kashmir.jpg" alt="Kashmir Tour" />
+        <h3>Kashmir</h3>
+        <p>Discover the 'Paradise on Earth' with serene lakes and stunning mountains.</p>
+        <div class="more-info">
+          <p>
+            <strong>Kashmir Paradise Tour Package</strong><br><br>
+
+            <strong>Duration:</strong> 5 Nights / 6 Days<br>
+            <strong>Destinations Covered:</strong> Srinagar &ndash; Gulmarg &ndash; Pahalgam &ndash; Sonamarg<br><br>
+
+            <strong>Package Highlights:</strong><br>
+            &bull; Shikara ride on the iconic Dal Lake<br>
+            &bull; Stay in traditional houseboats and luxury hotels<br>
+            &bull; Gondola ride in Gulmarg &ndash; the highest cable car in Asia<br>
+            &bull; Scenic drives through the Himalayas and pine forests<br>
+            &bull; Explore Mughal Gardens and local Kashmiri handicrafts<br><br>
+
+            <strong>Inclusions:</strong><br>
+            &bull; Accommodation on twin sharing basis<br>
+            &bull; Daily breakfast and dinner<br>
+            &bull; All transfers and sightseeing by private vehicle<br>
+            &bull; Entry fees to monuments and gardens<br>
+            &bull; 24/7 travel assistance
+          </p>
+        </div>
+      </div>
+      <div class="tour">
+        <img src="images/chardhaam.jpg" alt="Char Dham Yatra" />
+        <h3>Char Dham</h3>
+        <p>Embark on a spiritual journey through India's sacred Char Dham pilgrimage circuit.</p>
+        <div class="more-info">
+          <p>
+            <strong>Char Dham Yatra Package &ndash; A Journey to the Divine</strong><br><br>
+
+            <strong>Duration:</strong> 11 Days / 10 Nights<br>
+            <strong>Destinations Covered:</strong> Yamunotri &ndash; Gangotri &ndash; Kedarnath &ndash; Badrinath<br><br>
+
+            <strong>Package Highlights:</strong><br>
+            &bull; Darshan and puja at the four sacred shrines: Yamunotri, Gangotri, Kedarnath, and Badrinath<br>
+            &bull; Trek to the holy Kedarnath Temple, nestled in the Garhwal Himalayas<br>
+            &bull; Visit sacred sites like Haridwar, Rishikesh, Guptkashi, and Joshimath<br>
+            &bull; Scenic drives through lush valleys, snow-capped mountains, and rivers<br>
+            &bull; Evening Ganga Aarti at Har Ki Pauri, Haridwar<br>
+            &bull; Optional helicopter service to Kedarnath available<br><br>
+
+            <strong>Inclusions:</strong><br>
+            &bull; Accommodation in clean, comfortable hotels/lodges<br>
+            &bull; Daily vegetarian meals (breakfast and dinner)<br>
+            &bull; All transfers and sightseeing by private vehicle<br>
+            &bull; Assistance with temple darshan and local guidance<br>
+            &bull; All taxes, tolls, parking, and driver charges
+          </p>
+        </div>
+      </div>
+      <div class="tour">
+        <img src="images/andaman.jpg" alt="Andaman and Nicobar Islands" />
+        <h3>Andaman and Nicobar Islands</h3>
+        <p>Crystal clear waters, coral reefs, and tropical escapes await you.</p>
+        <div class="more-info">
+          <p>
+            <strong>Andaman Islands Escape Package</strong><br><br>
+
+            <strong>Duration:</strong> 5 Days / 4 Nights<br>
+            <strong>Destinations Covered:</strong> Port Blair &ndash; Havelock Island &ndash; Radhanagar Beach &ndash; Cellular Jail<br><br>
+
+            <strong>Package Highlights:</strong><br>
+            &bull; Witness the historic Cellular Jail Light &amp; Sound Show<br>
+            &bull; Relax at the world-famous Radhanagar Beach (Asia&rsquo;s top-rated beach)<br>
+            &bull; Ferry ride to Havelock Island<br>
+            &bull; Enjoy water activities like snorkeling, scuba diving, and glass-bottom boat rides<br>
+            &bull; Visit Corbyn&rsquo;s Cove Beach, Ross Island, and Chidiya Tapu<br>
+            &bull; Stunning sunsets and tropical serenity<br><br>
+
+            <strong>Inclusions:</strong><br>
+            &bull; Comfortable accommodation with daily breakfast<br>
+            &bull; Airport pickup &amp; drop<br>
+            &bull; Ferry transfers between islands<br>
+            &bull; Sightseeing by private vehicle<br>
+            &bull; Entry tickets and permits for scheduled attractions
+          </p>
+        </div>
+      </div>
+      <div class="tour">
+        <img src="images/thailand.jpg" alt="Thailand Tour" />
+        <h3>Thailand</h3>
+        <p>Enjoy Thai culture, cuisine, beaches, and vibrant nightlife.</p>
+        <div class="more-info">
+          <p>
+            <strong>Thrilling Thailand Tour Package</strong><br><br>
+
+            <strong>Duration:</strong> 6 Days / 5 Nights<br>
+            <strong>Destinations Covered:</strong> Bangkok &ndash; Pattaya &ndash; Coral Island<br><br>
+
+            <strong>Package Highlights:</strong><br>
+            &bull; Visit Coral Island (Koh Larn) by speedboat &ndash; perfect for water sports and beach relaxation<br>
+            &bull; Enjoy Alcazar Cabaret Show &ndash; Thailand&rsquo;s famous cultural performance<br>
+            &bull; Bangkok city &amp; temple tour &ndash; Wat Pho, Golden Buddha, and more<br>
+            &bull; Explore local markets and malls: MBK Center, Chatuchak Market, and Siam Paragon<br>
+            &bull; Optional tours: Safari World &amp; Marine Park, floating market, or Chao Phraya River Cruise<br>
+            &bull; Street food, nightlife, and tropical vibes!<br><br>
+
+            <strong>Inclusions:</strong><br>
+            &bull; 3/4-star hotel accommodations with daily breakfast<br>
+            &bull; Airport transfers<br>
+            &bull; Coral Island tour with lunch<br>
+            &bull; Bangkok city &amp; temple tour<br>
+            &bull; All transfers and sightseeing as per itinerary<br>
+            &bull; Thailand Visa assistance
+          </p>
+        </div>
+      </div>
+      <div class="tour">
+        <img src="images/singapore.jpg" alt="Singapore Tour" />
+        <h3>Singapore</h3>
+        <p>Modern architecture, theme parks, and cultural neighborhoods blend beautifully here.</p>
+        <div class="more-info">
+          <p>
+            <strong>Sensational Singapore Tour Package</strong><br><br>
+
+            <strong>Duration:</strong> 5 Days / 4 Nights<br>
+            <strong>Destinations Covered:</strong> Singapore City &ndash; Sentosa Island &ndash; Universal Studios &ndash; Marina Bay<br><br>
+
+            <strong>Package Highlights:</strong><br>
+            &bull; City tour covering Merlion Park, Orchard Road, Chinatown &amp; Little India<br>
+            &bull; Full-day at Universal Studios Singapore &ndash; rides, shows, and movie-themed fun<br>
+            &bull; Explore Sentosa Island: Cable car ride, SEA Aquarium, Wings of Time show<br>
+            &bull; Visit the iconic Gardens by the Bay &amp; Marina Bay Sands SkyPark<br>
+            &bull; Shopping time at Bugis Street &amp; Marina Bay Sands Mall<br>
+            &bull; Optional add-ons: Night Safari, River Wonders, Jurong Bird Park<br><br>
+
+            <strong>Inclusions:</strong><br>
+            &bull; 3 or 4-star hotel accommodation with breakfast<br>
+            &bull; Return airport transfers<br>
+            &bull; Singapore Visa assistance<br>
+            &bull; All tours and transfers on SIC (seat-in-coach) basis<br>
+            &bull; Entry tickets to major attractions listed
+          </p>
+        </div>
+      </div>
+      <div class="tour">
+        <img src="images/dubai.jpg" alt="Dubai Tour" />
+        <h3>Dubai</h3>
+        <p>Experience luxury shopping, desert safaris, and skyscraping adventures in Dubai.</p>
+        <div class="more-info">
+          <p>
+            <strong>Dazzling Dubai Tour Package</strong><br><br>
+
+            <strong>Duration:</strong> 5 Days / 4 Nights<br>
+            <strong>Destinations Covered:</strong> Dubai City &ndash; Desert Safari &ndash; Burj Khalifa &ndash; Marina Cruise<br><br>
+
+            <strong>Package Highlights:</strong><br>
+            &bull; Visit the iconic Burj Khalifa &ndash; world&rsquo;s tallest building (124th floor access)<br>
+            &bull; Thrilling Desert Safari with dune bashing, camel rides &amp; BBQ dinner<br>
+            &bull; Dubai City Tour covering Jumeirah Mosque, Palm Jumeirah &amp; Dubai Mall<br>
+            &bull; Luxury Dhow Cruise Dinner at Dubai Marina with live entertainment<br>
+            &bull; Free time for shopping at Gold Souk and Mall of the Emirates<br>
+            &bull; Optional tours: Ferrari World, Dubai Frame, Abu Dhabi City Tour<br><br>
+
+            <strong>Inclusions:</strong><br>
+            &bull; 3 &amp; 4-star hotel accommodation with daily breakfast<br>
+            &bull; Dubai Visa + Travel Insurance<br>
+            &bull; Airport transfers (Dubai International)<br>
+            &bull; Guided city tour and entry tickets for listed attractions<br>
+            &bull; All transfers in air-conditioned vehicles
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="left-align">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="images/tourbus.jpg" alt="Tour Image 0" />
+      <img src="images/gallery1.jpg" alt="Tour Image 1" />
+      <img src="images/gallery4.jpg" alt="Tour Image 4" />
+      <img src="images/gallery5.jpg" alt="Tour Image 5" />
+      <img src="images/gallery6.jpg" alt="Tour Image 6" />
+      <img src="images/gallery9.jpg" alt="Tour Image 7" />
+      <!-- <img src="images/gallery10.jpg" alt="Tour Image 2" /> -->
+      <img src="images/gallery11.jpg" alt="Tour Image 8" />
+      <!-- <img src="images/gallery3.jpg" alt="Tour Image 3" /> -->
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"Absolutely the best travel experience we've ever had. Highly recommended!" – Shristi.</p>
+      </div>
+      <div class="testimonial">
+        <p>"Great service, friendly guides, and wonderful destinations. Will travel again!" – Harshit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="left-align">
+    <h2>Contact Us</h2>
+    <p>Email: majesticgt@outlook.com | Email: majesticglobaltour@gmail.com | Phone: +91 88269 04620</p>
+    <p>Mantra Moments, Dehu Alandi Road, Moshi, Pune</p>
+    <div class="social-links" style="margin-top: 1rem;">
+      <a href="https://wa.me/918826904620" target="_blank">📱 WhatsApp</a>
+      <a href="https://www.instagram.com/majestic_global_tour" target="_blank">📸 Instagram</a>
+      <a href="https://www.facebook.com/share/1ByUoKXFm9/?mibextid=wwXIfr" target="_blank">👍 Facebook</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Majestic Global Tours</p>
+  </footer>
+
+</body>
+</html>
